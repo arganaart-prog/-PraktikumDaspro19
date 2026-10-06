@@ -18,3 +18,34 @@ public class Studikasus119 {
 
         totalHarga = jumlahCup * Hargapercup;
         diskon = 0;
+
+        if (totalHarga >= 100000) {
+            diskon = totalHarga * 10 / 100;
+        }
+
+        totalbayar = totalHarga - diskon;
+
+    
+        if (uangBayar >= totalbayar) {
+            kembalian = uangBayar - totalbayar;
+
+            System.out.println("Total harga : Rp" + totalHarga);
+            System.out.println("Diskon      : Rp" + diskon);
+            System.out.println("Total bayar : Rp" + totalbayar);
+            System.out.println("Kembalian   : Rp" + kembalian);
+
+        } else {
+            kembalian = totalbayar - uangBayar;
+
+            System.out.println("Total harga : Rp" + totalHarga);
+            System.out.println("Diskon      : Rp" + diskon);
+            System.out.println("Total bayar : Rp" + totalbayar);
+            System.out.println("Uang tidak cukup");
+            System.out.println("Kekurangan  : Rp" + kembalian);
+        }
+
+        sc.close();
+    }
+}
+
+ 
